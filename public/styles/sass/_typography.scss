@@ -153,6 +153,7 @@ textarea {
 	width: 100%;
 	@include box-shadow(rgba($black,0.15) 0 1px 3px inset);
 	background: darken($white,3%);
+	-webkit-appearance: none;
 }
 
 button,
