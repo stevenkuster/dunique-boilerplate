@@ -1,0 +1,81 @@
+$total-columns  : 6;                // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 2em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;    // grid-padding equal to gutters
+$from-direction : left;
+
+//alternative layout breakpoints
+$tablet: 8;
+$computer: 60em 12;
+
+//colors
+$white: #fff;
+$black: #000;
+$gray: #ebebeb;
+$primcol: #ffd800;
+$seccol: #002c5a;
+
+// -- branding -------------------------
+$twitter-brand:  #35ccff;
+$facebook-brand: #03539e;
+$linkedin-brand: #217bc1;
+
+//fonts
+$font1: serif;
+$font2: "FontAwesome", sans-serif;
+
+//button mixin
+@mixin button($bg: $seccol, $textcol: $white, $pad: 0.5em 1em) {
+	display: inline-block;
+	padding: $pad;
+	background: $bg;
+	@include background-image(radial-gradient(top center, lighten($bg,20%), $bg));
+	color: $textcol;
+	font-family: $font1;
+	font-weight: 500;
+	border: 0;
+	@include box-shadow(rgba($black,0.1) 0 1px 3px);
+
+	&:hover,
+	&:focus {
+		background: lighten($seccol,10%);
+		color: $white;
+	}
+
+	&:focus {
+		outline: 1px solid $seccol;
+	}
+
+	&:active {
+		background: lighten($seccol,20%);
+	}
+
+	&:disabled {
+		background: darken($white,5%);
+		color: darken($white,25%);
+		cursor: default;
+	}
+
+	&.prim {
+		background: $primcol;
+		@include background-image(radial-gradient(top center, lighten($primcol,20%), $primcol));
+		color: $seccol;
+
+		&:hover,
+		&:focus {
+			background: lighten($primcol,10%);
+			@include background-image(radial-gradient(top center, lighten($primcol,30%), lighten($primcol,10%)));
+		}
+	}
+}
+
+// Retina JS mixin
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
+	background-image: image_url($image_name + $extention);
+	$x2img : $image_name + '@2x' + $extention;
+
+	@media all and (-webkit-min-device-pixel-ratio : 1.5) {
+		background-image: image_url($x2img);
+		background-size: $w $h;
+	}
+}
