@@ -55,18 +55,6 @@ $font2: "FontAwesome", sans-serif;
 		color: darken($white,25%);
 		cursor: default;
 	}
-
-	&.prim {
-		background: $primcol;
-		@include background-image(radial-gradient(top center, lighten($primcol,20%), $primcol));
-		color: $seccol;
-
-		&:hover,
-		&:focus {
-			background: lighten($primcol,10%);
-			@include background-image(radial-gradient(top center, lighten($primcol,30%), lighten($primcol,10%)));
-		}
-	}
 }
 
 // Retina JS mixin
