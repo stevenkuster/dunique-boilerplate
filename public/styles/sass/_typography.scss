@@ -153,6 +153,19 @@ textarea {
 	width: 100%;
 	@include box-shadow(rgba($black,0.15) 0 1px 3px inset);
 	background: darken($white,3%);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="file"] {
 	-webkit-appearance: none;
 }
 
