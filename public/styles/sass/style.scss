@@ -8,3 +8,7 @@
 @import "definitions";
 @import "typography";
 @import "ee";
+
+.wrapper {
+	@include container($total-columns, $tablet, $computer);
+}

@@ -172,9 +172,48 @@ textarea {
   background: #f7f7f7;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="file"] {
+  -webkit-appearance: none;
+}
+
 button,
 input[type="submit"] {
   cursor: pointer;
   font-family: serif;
   font-size: 100%;
+}
+
+.wrapper {
+  *zoom: 1;
+  max-width: 34em;
+  _width: 34em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 46em) {
+  .wrapper {
+    max-width: 46em;
+  }
+}
+@media (min-width: 60em) {
+  .wrapper {
+    max-width: 70em;
+  }
 }

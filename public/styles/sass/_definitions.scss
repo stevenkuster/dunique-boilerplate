@@ -8,6 +8,8 @@ $from-direction : left;
 $tablet: 8;
 $computer: 60em 12;
 
+// Define containers with "@include container($total-columns, $tablet, $computer);"
+
 //colors
 $white: #fff;
 $black: #000;
