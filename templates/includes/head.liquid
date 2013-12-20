@@ -5,7 +5,9 @@
 	<!-- Title block allowing child pages to override -->
 	<title>Project title</title>
 
-	{{ "mobify.min.js" | asset_url | script_tag }}
+	{{ "vendor/mobify.min.js" | asset_url | script_tag }}
+	
+	<script data-main="{{ 'app.js' | asset_url }}" src="{{ 'require.min.js' | asset_url }}"></script>
 
 	<meta name="author" content="">
 	<meta name="description" content="">
@@ -32,10 +34,7 @@
 	{{ "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" | asset_url | stylesheet_tag }}
 
 	<!--[if (gte IE 6)&(lte IE 8)]>
-		{{ "selectivizr.min.js" | asset_url | script_tag }}
+		{{ "vendor/selectivizr.min.js" | asset_url | script_tag }}
 	  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
 	<![endif]-->
-	{{ "respond.min.js" | asset_url | script_tag }}
-	{{ "html5shiv.min.js" | asset_url | script_tag }}
-	{{ "modernizr.min.js" | asset_url | script_tag }}
 </head>
